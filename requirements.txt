@@ -18,6 +18,7 @@ mss
 pygame
 pynput
 pywin32
+pywin32api
 requests
 wheel
 termcolor
