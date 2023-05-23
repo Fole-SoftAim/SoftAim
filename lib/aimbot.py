@@ -208,7 +208,7 @@ class Aimbot:
                 collect_pause = time.perf_counter()
             
             cv2.putText(frame, f"FPS: {int(1/(time.perf_counter() - start_time))}", (5, 30), cv2.FONT_HERSHEY_DUPLEX, 1, (113, 116, 244), 2)
-            cv2.imshow("Lunar Vision", frame)
+            cv2.imshow("Fole Vision", frame)
             if cv2.waitKey(1) & 0xFF == ord('0'):
                 break
 
@@ -217,4 +217,4 @@ class Aimbot:
         Aimbot.screen.close()
         os._exit(0)
 
-if __name__ == "__main__": print("You are in the wrong directory and are running the wrong file; you must run lunar.py")
+if __name__ == "__main__": print("You are in the wrong directory and are running the wrong file; you must run FoleSoft.py")
