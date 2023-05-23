@@ -17,9 +17,9 @@ def on_release(key):
         pass
 
 def main():
-    global lunar
-    lunar = Aimbot(collect_data = "collect_data" in sys.argv)
-    lunar.start()
+    global fole
+    fole = Aimbot(collect_data = "collect_data" in sys.argv)
+    fole.start()
 
 def setup():
     path = "lib/config"
@@ -34,7 +34,7 @@ def setup():
                 number = float(input(str))
                 valid_input = True
             except ValueError:
-                print("[!] Invalid Input. Make sure to enter only the number (e.g. 6.9)")
+                print("[!] Invalid Input. Make sure to enter only the number (e.g. 6.6)")
         return number
 
     xy_sens = prompt("X-Axis and Y-Axis Sensitivity (from in-game settings): ")
@@ -52,18 +52,18 @@ if __name__ == "__main__":
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 
     print(colored('''
-    | |
-    | |    _   _ _ __   __ _ _ __
-    | |   | | | | '_ \ / _` | '__|
-    | |___| |_| | | | | (_| | |
-    \_____/\__,_|_| |_|\__,_|_|
+    Fole SoftAim
+    
+    (Nvidia Cuda Requied)
 
-    (Neural Network Aimbot)''', "yellow"))
+
+
+    (SoftAim)''', "yellow"))
 
     path_exists = os.path.exists("lib/config/config.json")
     if not path_exists or ("setup" in sys.argv):
         if not path_exists:
-            print("[!] Sensitivity configuration is not set")
+            print("[!] Sensitivity is not set")
         setup()
     path_exists = os.path.exists("lib/data")
     if "collect_data" in sys.argv and not path_exists:
